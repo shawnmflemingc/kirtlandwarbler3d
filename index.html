@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: "Trebuchet MS";
+      margin: 0;
+    }
+h1 {
+  font-weight: bold;
+  color: #009933;
+  font-size: 18pt;
+  margin-left: 25px;
+}  
+p {
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
+}
+  body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+  /* unvisited link */
+a:link {
+  color: coral;
+}
+
+/* visited link */
+a:visited {
+  color: chocolate;
+}
+
+/* mouse over link */
+a:hover {
+  color: cornsilk;
+}
+
+/* selected link */
+a:active {
+  color: blueviolet;
+}
+.row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: grey; }
+.first-row {
+    background-color: black; 
+    height: 100px; 
+    overflow: auto;
+    column-count: 3;
+    column-fill: balance;
+    }
+.second-row { flex-grow: 1; border: none; margin: 0; padding: 0; overflow: hidden;}
+</style>
+<body>
+
+<div class="row-container">
+  <div class="first-row">
+    <p><a href="#" onclick="document.getElementById('psframe').src = 'photosphere.html?p=01.jpg';">01</a></p>
+    <p><a href="#" onclick="document.getElementById('psframe').src = 'photosphere.html?p=02.jpg';">02</a></p>
+    <p><a href="#" onclick="document.getElementById('psframe').src = 'photosphere.html?p=03.jpg';">03</a></p>
+    <p><a href="#" onclick="document.getElementById('psframe').src = 'photosphere.html?p=04.jpg';">04</a></p>
+    <p><a href="#" onclick="document.getElementById('psframe').src = 'photosphere.html?p=05.jpg';">05</a></p>
+  </div>
+  <iframe id="psframe" src="photosphere.html?p=01.jpg" class="second-row"></iframe>
+</div>
+
+</body>
+</html>
